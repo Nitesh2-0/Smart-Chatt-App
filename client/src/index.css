@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.scrollBar {
+  overflow-y: auto;
+  min-height: 100px; 
+}
+
+.scrollBar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollBar::-webkit-scrollbar-track {
+  background: #1e1e2f;
+  border-radius: 4px;
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+  background-color: #4c4c6d;
+  border-radius: 4px;
+  border: 2px solid #1e1e2f;
+}
+
+.scrollBar::-webkit-scrollbar-thumb:hover {
+  background-color: #5a5a78;
+}

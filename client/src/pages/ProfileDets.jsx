@@ -2,8 +2,11 @@ import React from 'react';
 import { FaEnvelope, FaUser, FaCheckCircle } from 'react-icons/fa';
 import { MdVerified } from 'react-icons/md';
 import { IoIosClose } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 
 export const ProfileDets = ({ det, hide, setHide }) => {
+  const navigation = useNavigate();
+
   return (
     <div className='p-6 flex flex-col z-50 bg-[rgb(20,18,50)] text-white rounded-r-lg shadow-xl w-96 relative'>
 
@@ -17,12 +20,18 @@ export const ProfileDets = ({ det, hide, setHide }) => {
         </div>
       )}
 
-      <div className='flex justify-center'>
+      <div className='flex flex-col items-center'>
         <img
           src={det.avatarImage}
           alt={det.username}
           className='w-34 h-34 rounded-full border-2 border-blue-500 object-cover'
         />
+        <button
+          onClick={() => navigation('/setAvatar')}
+          className='mt-2 px-4 text-xs py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors'
+        >
+          Choose Avatar
+        </button>
       </div>
 
       <h2 className='mt-4 text-center text-2xl font-bold'>

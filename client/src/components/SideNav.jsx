@@ -42,7 +42,7 @@ const SideNav = ({ isGroup, setIsGroup, setHideContacts, hideContacts }) => {
             />
           </button>
           {isProfile && (
-            <div className='absolute z-50 p-2 rounded-r bg-[rgb(10,10,30)] text-white left-12 -top-44'>
+            <div className='absolute z-50 p-2 rounded-r bg-[rgb(10,10,30)] text-white left-12 -top-48'>
               <ProfileDets det={user} />
             </div>
           )}

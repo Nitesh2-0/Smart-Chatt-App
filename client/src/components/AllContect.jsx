@@ -24,10 +24,10 @@ const AllContacts = ({ selectedId, setSelectedId, allUsers = [] }) => {
                 <FaUser className="mr-2" />
                 {user?.username ?? "Unknown User"}
               </h1>
-              <p className="text-sm font-semibold flex items-center space-x-1">
+              {/* <p className="text-sm font-semibold flex items-center space-x-1">
                 <FaCircle className={user?.status === "offline" ? "text-red-600" : "text-green-600"} />
                 <span>{user?.status ?? "Status unknown"}</span>
-              </p>
+              </p> */}
             </div>
           </button>
         ))}

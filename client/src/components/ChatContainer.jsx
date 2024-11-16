@@ -86,7 +86,7 @@ const ChatContainer = ({ selectedDet, socket }) => {
           />
           <div>
             <h1 className="text-gray-100 font-semibold">{selectedDet?.username}</h1>
-            <p className={ `${selectedDet?.status == "offline" ? "text-red-600":"text-green-600"} text-sm`}>{selectedDet?.status}</p>
+            {/* <p className={ `${selectedDet?.status == "offline" ? "text-red-600":"text-green-600"} text-sm`}>{selectedDet?.status}</p> */}
           </div>
         </div>
         <div className="flex items-center gap-4 text-gray-300">

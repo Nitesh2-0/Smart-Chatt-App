@@ -13,7 +13,7 @@ app.use(express.json());
 app.use('/api/auth', userRoute);
 app.use('/api/messages', messageRoute);
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('DB connected successfully.'))
   .catch((err) => console.error('DB connection error:', err));
 

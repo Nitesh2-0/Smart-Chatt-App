@@ -62,9 +62,9 @@ io.on("connection", (socket) => {
 
       // Broadcast the user's offline status to all connected clients
       io.emit("user-offline", userId);
-      console.log(`User ${userId} is offline`);
+      // console.log(`User ${userId} is offline`);
     }
     
-    console.log("disconnected");
+    // console.log("disconnected");
   });
 });

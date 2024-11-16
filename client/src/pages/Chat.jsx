@@ -47,7 +47,7 @@ const Chat = () => {
         console.log("Attempting to reconnect...");
       });
 
-      socket.current.on("reconnect", (attemptNumber) => {
+      socket.current.on("reconnect", () => {
         setIsReconnecting(false);
         sendQueuedMessages();
       });
@@ -58,7 +58,9 @@ const Chat = () => {
       });
 
       return () => {
-        socket.current.disconnect();
+        if (socket.current) {
+          socket.current.disconnect();
+        }
       };
     }
   }, [user]);
@@ -85,7 +87,7 @@ const Chat = () => {
       setOffline(false);
       setShowOnlineMsg(true);
       setTimeout(() => {
-        setShowOnlineMsg(false);h
+        setShowOnlineMsg(false);
       }, 1000);
       sendQueuedMessages();
       if (isReconnecting) {
@@ -107,7 +109,7 @@ const Chat = () => {
   }, [isReconnecting, unsentMessages]);
 
   const sendMessage = (message) => {
-    if (offline || socket.current.disconnected) {
+    if (offline || socket.current?.disconnected) {
       console.log("User is offline, queuing message");
       setUnsentMessages((prevMessages) => [...prevMessages, message]);
     } else {
@@ -181,4 +183,4 @@ const Chat = () => {
   );
 };
 
-export default Chat; 
+export default Chat;

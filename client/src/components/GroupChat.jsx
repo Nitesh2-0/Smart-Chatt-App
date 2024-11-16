@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaTrash } from 'react-icons/fa';
-import { v4 as uuidv4 } from 'uuid'; // Importing uuid for unique IDs
+import { v4 as uuidv4 } from 'uuid'; 
 
 const GroupChat = ({ isGroup, setIsGroup }) => {
   const [groupData, setGroupData] = useState({
@@ -27,7 +27,7 @@ const GroupChat = ({ isGroup, setIsGroup }) => {
     }
     const newGroupEntry = {
       ...groupData,
-      id: uuidv4() // Adding a unique id for each group
+      id: uuidv4()
     };
     setNewGroup((prevGroups) => [...prevGroups, newGroupEntry]);
     setGroupData({ roomId: '', groupName: '' });

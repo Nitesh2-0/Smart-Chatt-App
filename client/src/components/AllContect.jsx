@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaUser, FaCircle } from 'react-icons/fa';
+import { FaUser} from 'react-icons/fa';
 
 const AllContacts = ({ selectedId, setSelectedId, allUsers = [] }) => {
   return (
